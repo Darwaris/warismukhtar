@@ -1,0 +1,39 @@
+const skills = [
+  "OSINT Research",
+  "Telegram Bot Development",
+  "API Scraping",
+  "API Integration",
+  "Web Basics",
+  "Automation"
+];
+
+export default function Skills() {
+  return (
+    <section className="section">
+      <h2>Skills & Expertise</h2>
+      <div className="grid">
+        {skills.map(skill => (
+          <div className="glass card" key={skill}>{skill}</div>
+        ))}
+      </div>
+
+      <style jsx>{`
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+          gap: 20px;
+        }
+        .card {
+          padding: 30px;
+          text-align: center;
+          transition: 0.4s;
+        }
+        .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 0 25px #00ffe0;
+        }
+      `}</style>
+    </section>
+  );
+}
+
