@@ -20,6 +20,31 @@ document.addEventListener('DOMContentLoaded', function() {
         'UI/UX Enthusiast',
         'Problem Solver',
         'Tech Innovator'
+  // Mobile Navigation Toggle
+
+if(hamburger && navMenu){
+
+hamburger.addEventListener("click", function(){
+
+hamburger.classList.toggle("active");
+
+navMenu.classList.toggle("active");
+
+});
+
+}
+
+
+// Close menu when clicking links
+
+navLinks.forEach(link => {
+
+link.addEventListener("click", function(){
+
+hamburger.classList.remove("active");
+
+navMenu.classList.remove("active");
+
     ];
 
     // Typewriter Effect
